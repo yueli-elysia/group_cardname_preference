@@ -1,0 +1,50 @@
+{
+  "name": "group_cardname_preference",
+  "id": "group_cardname_preference",
+  "display_name": "群聊昵称优先",
+  "version": "1.0.0",
+  "description": "群聊中遇到陌生成员时，标注并引导 chatter 优先使用群名片称呼，而不是 QQ 昵称",
+  "summary": "让 bot 在群聊里用群名片称呼陌生成员，熟人保持原有称呼。",
+  "author": "yile2",
+  "license": "AGPL-3.0",
+  "categories": ["chat"],
+  "tags": ["群聊", "群名片", "昵称", "提示词", "qq", "chatter"],
+  "dependencies": {
+    "plugins": [],
+    "components": []
+  },
+  "include": [
+    {
+      "component_type": "event_handler",
+      "component_name": "group_cardname_prompt_rule",
+      "dependencies": [],
+      "enabled": true
+    },
+    {
+      "component_type": "event_handler",
+      "component_name": "group_cardname_history_formatter",
+      "dependencies": [],
+      "enabled": true
+    },
+    {
+      "component_type": "event_handler",
+      "component_name": "group_cardname_unread_formatter",
+      "dependencies": [],
+      "enabled": true
+    },
+    {
+      "component_type": "event_handler",
+      "component_name": "group_cardname_unread_prefetch",
+      "dependencies": [],
+      "enabled": true
+    }
+  ],
+  "entry_point": "plugin.py",
+  "api_version": {
+    "database_api": "1.0.0",
+    "log_api": "1.0.0"
+  },
+  "min_core_version": "1.2.0-rc.2",
+  "python_dependencies": [],
+  "dependencies_required": true
+}
